@@ -1,0 +1,15 @@
+body {
+    width: 375px;
+    height: 933px;
+    background: #F3F5FC;
+}
+
+.logo-div {
+    margin: 10px 10px;
+}
+
+.txt-area {
+    color: #0A3871;
+    position: absolute;
+    z-index: 0;
+}
