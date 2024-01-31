@@ -1,15 +1,24 @@
 body {
-    width: 375px;
-    height: 933px;
     background: #F3F5FC;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.logo-div {
+.logo {
+    width: 32px;
+    height: 48px;
     margin: 10px 10px;
 }
 
-.txt-area {
+.input {
+    display: flex;
+    justify-content: center;
+}
+
+.input textarea {
+    text-align: center;
+    font-size: 2em;
+    width: 320px;
     color: #0A3871;
-    position: absolute;
-    z-index: 0;
 }
