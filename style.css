@@ -24,6 +24,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
 }
 
 .input {
@@ -51,15 +53,16 @@ main {
 
 .buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .encrypt-decrypt {
     width: 343px;
     height: 60px;
     border-radius: 24px;
-    margin: 10px 0;
+    margin: 10px;
     cursor: pointer;
 }
 
@@ -87,8 +90,8 @@ main {
     margin: 50px 0;
     padding: 10px;
     background: #FFFFFF;
-    width: 327px;
-    height: 186px;
+    width: 90vw;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,4 +112,8 @@ main {
     color: #495057;
     font-size: calc(1em + 1vw);
     margin-top: 10px;
+}
+
+@media only screen and (min-width:820px) { 
+    
 }
