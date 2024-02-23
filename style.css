@@ -10,7 +10,7 @@ html {
 body {
     background: #F3F5FC;
     font-family: 'Inter', monospace;
-    width: 100vw;
+    width: 100%;
     height: auto;
 }
 
@@ -25,7 +25,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 100vh;
+    height: auto;
 }
 
 .input {
@@ -115,5 +115,34 @@ main {
 }
 
 @media only screen and (min-width:820px) { 
-    
+    main {
+        display: flex;
+        flex-direction: row;
+        margin: 0 40px;
+    }
+
+    .input {
+        width: 70%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70vw;
+        height: 85vh;
+    }
+
+    .input textarea {
+        height: 320px;
+    }
+
+    .lower-txt {
+        align-self:self-start;
+        margin-left: 15%;
+    }
+
+    .output {
+        height: 68vh;
+    }
 }
