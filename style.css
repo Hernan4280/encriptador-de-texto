@@ -101,6 +101,10 @@ main {
     box-shadow: 7px 19px 80px -30px rgba(0,0,0,0.57);
 }
 
+.output img {
+    display:none;
+}
+
 .paragraph1 {
     color: #343A40;
     font-size: calc(1.5em + 1vw);
@@ -114,7 +118,7 @@ main {
     margin-top: 10px;
 }
 
-@media only screen and (min-width:820px) { 
+@media only screen and (min-width:825px) { 
     main {
         display: flex;
         flex-direction: row;
@@ -129,12 +133,17 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
         width: 70vw;
-        height: 85vh;
+        height: 70vh;
     }
 
     .input textarea {
         height: 320px;
+    }
+
+    .buttons {
+        margin: 0 0 60px;
     }
 
     .lower-txt {
@@ -143,6 +152,19 @@ main {
     }
 
     .output {
-        height: 68vh;
+        height: 70vh;
+    }
+
+    .output img {
+        display:block;
+        object-fit: contain;
+    }
+
+    .paragraph1 {
+        font-size: calc(0.7em + 1vw);
+    }
+    
+    .paragraph2 {
+        font-size: calc(0.3em + 1vw);
     }
 }
