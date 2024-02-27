@@ -16,11 +16,11 @@
     <main>
         <form action="">
             <div class="input">
-                <textarea name="" cols="30" rows="10">Ingrese el texto aquí</textarea>
+                <textarea id="miTextarea" cols="30" rows="10">Ingrese el texto aquí</textarea>
             </div>
             <p class="lower-txt"><img src="./assets/Vector.png" alt="i"> Solo letras minúsculas y sin acentos</p>
             <div class="buttons">
-                <button id="button1" class="encrypt-decrypt">Encriptar</button>
+                <button onclick="encrypt()" id="button1" class="encrypt-decrypt">Encriptar</button>
                 <button id="button2" class="encrypt-decrypt">Desencriptar</button>
             </div>
         </form>
@@ -32,5 +32,6 @@
             <div class="btn-copiar"></div>
         </div>
     </main>
+    <script src="app.js"></script>
 </body>
 </html>
