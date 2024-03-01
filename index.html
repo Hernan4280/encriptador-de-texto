@@ -14,18 +14,18 @@
         </div>
     </header>
     <main>
-        <form action="">
+        <form>
             <div class="input">
                 <textarea id="miTextarea" cols="30" rows="10">Ingrese el texto aquí</textarea>
             </div>
             <p class="lower-txt"><img src="./assets/Vector.png" alt="i"> Solo letras minúsculas y sin acentos</p>
             <div class="buttons">
-                <button onclick="encrypt()" id="button1" class="encrypt-decrypt">Encriptar</button>
-                <button id="button2" class="encrypt-decrypt">Desencriptar</button>
+                <button id="button1" type="button" onclick="encriptar()" class="encrypt-decrypt" disabled>Encriptar</button>
+                <button id="button2" type="button" class="encrypt-decrypt">Desencriptar</button>
             </div>
         </form>
         <div class="output">
-            <img src="./assets/Muñeco.png" alt="Imagen de un muñeco">
+            <img id="imagen" src="./assets/Muñeco.png" alt="Imagen de un muñeco">
             <p class="output-text"></p>
             <p class="paragraph1">Ningún mensaje fue encontrado</p>
             <p class="paragraph2">Ingresa el texto que desees encriptar o desencriptar.</p>
