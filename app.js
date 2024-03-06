@@ -7,7 +7,7 @@ function borrar() {
 
 function validarTexto(texto) {
     if (/[^a-z\s]/gm.test(texto)) {
-        alert('Solo se permite letras minusculas sin acentos.');
+        alert('Solo se permite letras minusculas sin acentos \nni caracteres especiales.');
         window.location.reload();
     } else if (texto.length == 0 || !(/(?:.*[a-zA-Z0-9]){1}/gm.test(texto))) {
         alert('Campo de texto vacío.');
