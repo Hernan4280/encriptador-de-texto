@@ -96,6 +96,9 @@ function btnEncriptar() {
     let img = document.getElementById('imagen');
     img.style.display = 'none';
 
+    let op = document.querySelector('.output-text');
+    op.style.display = 'block';
+
     let p1 = document.querySelector('.paragraph1');
     let p2 = document.querySelector('.paragraph2');
     p1.innerHTML = "";

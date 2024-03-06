@@ -151,6 +151,7 @@ main {
 }
 
 .output-text {
+    display: none;
     font-size: calc(1em + 1vw);
     color: #343A40;
     width: 100%;
