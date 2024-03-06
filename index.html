@@ -21,7 +21,7 @@
             <p class="lower-txt"><img src="./assets/Vector.png" alt="i"> Solo letras minúsculas y sin acentos</p>
             <div class="buttons">
                 <button id="button1" type="button" onclick="btnEncriptar()" class="encrypt-decrypt" disabled>Encriptar</button>
-                <button id="button2" type="button" class="encrypt-decrypt" disabled>Desencriptar</button>
+                <button id="button2" type="button" onclick="btnDesencriptar()" class="encrypt-decrypt" disabled>Desencriptar</button>
             </div>
         </form>
         <div class="output">
@@ -29,6 +29,7 @@
             <p class="output-text"></p>
             <p class="paragraph1">Ningún mensaje fue encontrado</p>
             <p class="paragraph2">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <div id="btn-reset"></div>
             <div id="btn-copiar"></div>
         </div>
     </main>

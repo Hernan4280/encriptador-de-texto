@@ -16,24 +16,40 @@ function validarTexto(texto) {
     }
 }
 
-function botonCopiar(txtEncriptado) {
+function botonCopiar() {
+    // Se crea el boton copiar al encriptar.
     const nuevoBoton = document.createElement("button");
     nuevoBoton.innerHTML = "Copiar";
     nuevoBoton.setAttribute("id", "mi-btn");
 
+    // Se ubica el boton en el contenedor de texto encriptado.
     const miBoton = document.getElementById("btn-copiar");
     miBoton.appendChild(nuevoBoton);
 
+    // Se le da funcionalidad al boton copiar.
     nuevoBoton.onclick = async function copiarAlPortapapeles() {
+        const txtEncriptado = document.querySelector('.output-text').innerHTML;
+        document.getElementById("button2").disabled = false;
         try {
             await navigator.clipboard.writeText(txtEncriptado);
-            console.log('Contenido copiado al portapapeles', txtEncriptado);
+            console.log('Contenido copiado al portapapeles');
             document.getElementById("miTextarea").value = "";
-            /* Resuelto - texto copiado al portapapeles con éxito */
           } catch (err) {
             console.error('Error al copiar: ', err);
-            /* Rechazado - fallo al copiar el texto al portapapeles */
           }
+    }
+}
+
+function botonReset() {
+    const nuevoBoton = document.createElement("button");
+    nuevoBoton.innerHTML = "Reset";
+    nuevoBoton.setAttribute("id", "mi-btn-reset");
+
+    const miBoton = document.getElementById("btn-reset");
+    miBoton.appendChild(nuevoBoton);
+
+    nuevoBoton.onclick = function() {
+        window.location.reload();
     }
 }
 
@@ -57,7 +73,19 @@ function encriptar(texto) {
     return copiaTxt;
 }
 
+function desencriptar(texto) {
+    const desencriptada = [...texto];
+    for (let k in llaves) {
+        for (let i=0; i < texto.length; i++) {
+            if (llaves[k] === texto[i]) {
+                desencriptada[i] = k;
+            }
+        }
+    }
+    return desencriptada;
+}
 
+let arrayEncriptado = [];
 let bloqueo = false;
 function btnEncriptar() {
 
@@ -73,14 +101,24 @@ function btnEncriptar() {
     p1.innerHTML = "";
     p2.innerHTML = "";
 
+    arrayEncriptado = [...encriptar(texto)];
     let salidaEncriptada = document.querySelector('.output-text');
-    salidaEncriptada.innerHTML = encriptar(texto).join('');
+    salidaEncriptada.innerHTML = arrayEncriptado.join('');
 
-    const txtEncriptado = document.querySelector('.output-text').innerHTML;
     if (bloqueo === false) {
-        botonCopiar(txtEncriptado);
+        botonCopiar();
         bloqueo = true;
     }
 
     document.getElementById("button1").disabled = true;
+}
+
+let bloqueoReset = false;
+function btnDesencriptar() {
+    const arrayDesencriptado = desencriptar(arrayEncriptado);
+    document.querySelector('.output-text').innerHTML = arrayDesencriptado.join('');
+    if (bloqueoReset === false) {
+        botonReset();
+        bloqueoReset = true;
+    }
 }

@@ -68,7 +68,7 @@ main {
 }
 
 .encrypt-decrypt {
-    width: 320px;
+    width: 250px;
     height: 50px;
     border-radius: 15px;
     font-size: 18px;
@@ -101,7 +101,7 @@ main {
 }
 
 #mi-btn {
-    width: 50%;
+    width: 100px;
     height: 45px;
     border-radius: 15px;
     font-size: 18px;
@@ -110,6 +110,28 @@ main {
     color: #0A3871;
     background: #FFFFFF;
     border: 1px solid #0A3871;
+}
+
+#mi-btn:active {
+    color: #d0dff1;
+    background: #0A3871;
+}
+
+#mi-btn-reset {
+    width: 100px;
+    height: 45px;
+    border-radius: 15px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background: #0A3871;
+    border: 1px solid #FFFFFF;
+}
+
+#mi-btn-reset:active {
+    color: #0A3871;
+    background: #d0dff1;
 }
 
 .output {
